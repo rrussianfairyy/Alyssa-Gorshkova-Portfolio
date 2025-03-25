@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#intro-screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #bb1391;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    font-size: 2vw;
+    font-family: monospace;
+    text-align: center;
+}
+#enter-btn {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 1.2vw;
+    font-family:monospace;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff8ae2, #ff00a2); /* Gradient background */
+    color: white;
+    border: 0px solid transparent; /* Default border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    opacity: 0;
+    transition: 
+        opacity 1.5s ease-in-out,
+        background 3s ease,
+        transform 0.2s ease,
+        border 0.3s ease;
+}
+
+/* Show button when needed */
+#enter-btn.show {
+    opacity: 1;
+}
+
+/* Hover effect */
+#enter-btn:hover {
+    background: linear-gradient(135deg, #8f83ff, #b2f3ff); /* Reverse gradient */
+    transform: scale(1.05);
+    border: 2px solid white;
+}
+
+/* Active (click) effect */
+#enter-btn:active {
+    transform: scale(0.95);
+    background: linear-gradient(135deg, #ffffff, #ff0088);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    #enter-btn {
+        font-size: 4vw;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+}
+
+
+
+body {
+    background-color: #bb1391;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden; /* Prevents any overflow that could cause text to disappear */
+    width: 100%;
+}
+
+
+h1 {
+    font-family:monospace;
+    color: white;
+    font-size: 3vw; /* Scales font size relative to the viewport width */
+    text-transform: uppercase;
+    text-align: left;
+    position: absolute; 
+    top: 8vh; /* Keeps text positioned from the top */
+    left: 5vw; /* Moves text horizontally, 5% from the left edge */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+h3 {
+    font-family:monospace;
+    color: white;
+    font-size: 1.2vw; /* Scales font size relative to the viewport width */
+    text-transform: none;
+    text-align: left;
+    position: absolute; 
+    top: 15.5vh; /* Places it below the h1 */
+    left: 5vw; /* Moves text horizontally, 5% from the left edge */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+h4 {
+    font-family:monospace;
+    color: white;
+    font-size: 1.2vw; /* Scales font size relative to the viewport width */
+    text-transform: none;
+    text-align: left;
+    position: absolute; 
+    top: 30vh; /* Places it below the h1 */
+    left: 5vw; /* Moves text horizontally, 5% from the left edge */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+
+h5 {
+    font-family:monospace;
+    color: white;
+    font-size: 1.2vw; /* Scales font size relative to the viewport width */
+    text-transform: none;
+    text-align: left;
+    position: absolute; 
+    top: 34vh; /* Places it below the h1 */
+    left: 5vw; /* Moves text horizontally, 5% from the left edge */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+h6 {
+    font-family:monospace;
+    color: white;
+    font-size: 1.2vw; /* Scales font size relative to the viewport width */
+    text-transform: none;
+    text-align: left;
+    position: absolute; 
+    top: 38vh; /* Places it below the h1 */
+    left: 5vw; /* Moves text horizontally, 5% from the left edge */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+.contact-link {
+    font-family: monospace;
+    color: white !important; /* Ensures text remains white */
+    font-size: 1.2vw;
+    text-transform: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    position: absolute;
+    z-index: 10;
+}
+
+/* Email position */
+.email {
+    top: 8.6vh;
+    left: 53vw; /* Adjust if needed */
+}
+
+/* Instagram position */
+.ig {
+    top: 8.6vh;
+    left: 82vw; /* Adjust for spacing */
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Adjust spacing between them */
+.contact-link:nth-of-type(2) {
+    margin-left: 3vw; /* Moves the Instagram link slightly to the right */
+}
+
+
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
